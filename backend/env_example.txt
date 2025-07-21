@@ -1,0 +1,21 @@
+# Amazon Product Data Agent - API Keys
+# Replace 'demo' with your actual API keys
+
+# Rainforest API (https://www.rainforestapi.com/)
+RAINFOREST_API_KEY=demo
+
+# ScraperAPI (https://www.scraperapi.com/)
+SCRAPERAPI_KEY=demo
+
+# RapidAPI Amazon Product Reviews (https://rapidapi.com/restyler/api/amazon-product-reviews-keywords)
+RAPIDAPI_KEY=demo 
+
+# FastAPI Backend API Key (required for /scrape endpoint)
+BACKEND_API_KEY=changeme
+
+# CORS origins (comma-separated, * for all)
+CORS_ORIGINS=*
+
+# Rate limiting (requests per window, window in seconds)
+RATE_LIMIT=10
+RATE_LIMIT_WINDOW=60 

@@ -1,0 +1,28 @@
+# After running `docker-compose up --build`, access the frontend at:
+#   http://localhost/
+# The backend API will be available at:
+#   http://localhost:8001/
+
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./product-insight-reveal-main
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./product-insight-reveal-main/backend
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+    # Uncomment the next line if you want to use a .env file for backend secrets
+    # env_file: ./product-insight-reveal-main/backend/.env 
